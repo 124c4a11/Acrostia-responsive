@@ -1,15 +1,15 @@
-@function em($px, $base: $base-font-size) {
+@function em($px, $base: $font-size-base) {
   @return ($px / $base) * 1em;
 }
 
-@function emtopx($em, $base: $base-font-size) {
+@function emtopx($em, $base: $font-size-base) {
   @return ($em * $base) * 1px;
 }
 
-@function rem($px, $base: $base-font-size) {
+@function rem($px, $base: $font-size-base) {
   @return ($px / $base) * 1rem;
 }
 
-@function remtopx($rem, $base: $base-font-size) {
+@function remtopx($rem, $base: $font-size-base) {
   @return ($rem * $base) * 1px;
 }
