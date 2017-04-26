@@ -91,31 +91,71 @@ $content-color: rgba(116, 199, 213, 1);
   }
 }
 
-.main-carousel__item {
-  position: relative;
-}
+/*==========================================================================
+  main-carousel__caption
+==========================================================================*/
 
 .main-carousel__caption {
   @include transform-center();
-  @include clearfix();
   z-index: 1;
-  padding: em(18) em(43);
-  border-radius: 4px;
-  overflow: hidden;
+  width: 100%;
   color: $content-color;
+  text-align: center;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: em(9);
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: em(5);
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: em(3);
+  }
+}
+
+.main-carousel__caption-text-wrapper {
+  display: inline-block;
+  max-width: 80%;
+  padding: em(18) em(43);
+  overflow: hidden;
+  text-align: left;
+  border-radius: 4px;
   background-color: $semitransparent-color;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 70%;
+  }
+
+  @media only screen and (max-width: 480px) {
+    max-width: 55%;
+  }
+}
+
+.main-carousel__caption-col {
+  display: inline-block;
+
+  @media only screen and (max-width: 480px) {
+    display: block;
+  }
 }
 
 .main-carousel__caption-col_left {
-  float: left;
-  padding-right: em(12);
+  padding-right: em(11);
   text-align: right;
 }
 
 .main-carousel__caption-col_right {
-  float: right;
-  padding-left: em(12);
+  text-align: left;
+}
+
+.main-carousel__caption-col_left,
+.main-carousel__caption-col_right {
+  @media only screen and (max-width: 480px) {
+    text-align: center;
+  }
 }
 
 .main-carousel__item-text {
