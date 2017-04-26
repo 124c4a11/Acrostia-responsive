@@ -121,7 +121,7 @@ $content-color: rgba(116, 199, 213, 1);
 .main-carousel__item-text {
   @include lato(light);
   padding: 0;
-  margin: 9px 0;
+  margin: em(2.7) 0;
   line-height: 1;
 }
 
