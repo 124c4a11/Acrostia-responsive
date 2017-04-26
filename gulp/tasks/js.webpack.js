@@ -45,7 +45,8 @@ module.exports = function() {
           // fix jQuery plugins
           $: "jquery",
           jQuery: "jquery",
-          "window.jQuery": "jquery"
+          "window.jQuery": "jquery",
+          iScroll: 'iscroll'
         })
       ]
     };
