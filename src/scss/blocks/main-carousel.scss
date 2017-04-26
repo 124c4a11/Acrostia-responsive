@@ -2,7 +2,7 @@
   main-carousel
 ==========================================================================*/
 
-$semitransparent-color: rgba(255, 255, 255, .5);
+$semitransparent-color: rgba(255, 255, 255, .85);
 $content-color: rgba(116, 199, 213, 1);
 
 .main-carousel {
@@ -91,5 +91,51 @@ $content-color: rgba(116, 199, 213, 1);
   }
 }
 
+.main-carousel__item {
+  position: relative;
+}
 
+.main-carousel__caption {
+  @include transform-center();
+  @include clearfix();
+  z-index: 1;
+  padding: em(18) em(43);
+  border-radius: 4px;
+  overflow: hidden;
+  color: $content-color;
+  text-transform: uppercase;
+  background-color: $semitransparent-color;
+}
 
+.main-carousel__caption-col_left {
+  float: left;
+  padding-right: em(12);
+  text-align: right;
+}
+
+.main-carousel__caption-col_right {
+  float: right;
+  padding-left: em(12);
+}
+
+.main-carousel__item-text {
+  @include lato(light);
+  padding: 0;
+  margin: 9px 0;
+  line-height: 1;
+}
+
+.main-carousel__item-text_sm {
+  font-size: em(50);
+}
+
+.main-carousel__item-text_md {
+  font-size: em(60);
+}
+
+.main-carousel__item-text_lg {
+  @include lato(black);
+  margin: 0;
+  line-height: 1;
+  font-size: em(138.48);
+}
