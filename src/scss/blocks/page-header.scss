@@ -1,0 +1,30 @@
+/*==========================================================================
+  page-header
+==========================================================================*/
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  min-height: em(145);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .25;
+  }
+
+  &.page-header_bg::before {
+    opacity: 1;
+    background-image: linear-gradient(rgba(44, 62, 80, .55) 18%, transparent);
+  }
+}
