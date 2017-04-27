@@ -33,11 +33,17 @@ $content-color: rgba(116, 199, 213, 1);
     &::before {
       content: '';
       display: block;
-      width: 23px;
-      height: 23px;
+      width: em(29);
+      height: em(29);
       border: 5px solid $semitransparent-color;
       border-bottom: 0 none;
       transition: .25s;
+
+      @media only screen and (max-width: 768px) {
+        width: em(23);
+        height: em(23);
+        border-width: 4px;
+      }
     }
 
     &:hover::before {
@@ -46,48 +52,73 @@ $content-color: rgba(116, 199, 213, 1);
   }
 
   .owl-prev {
-    left: 0;
-    padding: em(50) em(20) em(50) em(50);
+    left: em(20);
+    padding: em(40) em(20) em(40) em(30);
 
     &::before {
       border-right: 0 none;
       transform: rotate(-45deg);
     }
+
+    @media only screen and (max-width: 992px) {
+      padding-left: em(20);
+    }
+
+    @media only screen and (max-width: 480px) {
+      left: em(10);
+    }
    }
 
   .owl-next {
-    right: 0;
-    padding: em(50) em(50) em(50) em(20);
+    right: em(20);
+    padding: em(40) em(30) em(40) em(20);
 
     &::before {
       border-left: 0 none;
       transform: rotate(45deg);
+    }
+
+    @media only screen and (max-width: 992px) {
+      padding-right: em(20);
+    }
+
+    @media only screen and (max-width: 480px) {
+      right: em(10);
     }
   }
 
   .owl-dots {
     position: absolute;
     left: 50%;
-    bottom: em(91);
+    bottom: em(70);
     transform: translateX(-50%);
+
+    @media only screen and (max-width: 1200px) {
+      bottom: em(40);
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: em(10);
+    }
   }
 
   .owl-dot {
     display: inline-block;
-    width: em(20);
-    height: em(20);
-    border-radius: 50%;
-    background-color: $semitransparent-color;
-    transition: .25s;
+    border: em(20) solid transparent;
 
-    &:hover,
-    &.active {
+    span {
+      display: block;
+      width: em(20);
+      height: em(20);
+      border-radius: 50%;
+      background-color: $semitransparent-color;
+      transition: .25s;
+    }
+
+    &:hover span,
+    &.active span {
       background-color: $content-color;
     }
-  }
-
-  .owl-dot + .owl-dot {
-    margin-left: em(40);
   }
 }
 
