@@ -167,10 +167,18 @@ $content-color: rgba(116, 199, 213, 1);
 
 .main-carousel__item-text_sm {
   font-size: em(50);
+
+  @media only screen and (max-width: 480px) {
+    font-size: em(80);
+  }
 }
 
 .main-carousel__item-text_md {
   font-size: em(60);
+
+  @media only screen and (max-width: 480px) {
+    font-size: em(90);
+  }
 }
 
 .main-carousel__item-text_lg {
