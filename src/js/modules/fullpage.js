@@ -1,6 +1,7 @@
 'use strict';
 
 import fullpage from 'fullpage.js';
+import pageHeader from './pageHeader.js';
 
 function init() {
   $('#fullpage').fullpage({
@@ -8,7 +9,18 @@ function init() {
     scrollOverflow: true,
 
     //Custom selectors
-    sectionSelector: '.page-section'
+    sectionSelector: '.page-section',
+
+    //Callbacks
+    afterLoad: function(anchorLink, index) {
+      var $this = this;
+
+      pageHeader.showBackground(this);
+    },
+
+    onLeave: function(index, nextIndex, direction) {
+      pageHeader.hideBackground();
+    }
   });
 }
 
