@@ -5,6 +5,11 @@ import pageHeader from './pageHeader.js';
 
 function init() {
   $('#fullpage').fullpage({
+    // Navigation
+    menu: '.main-menu__list',
+    anchors: ['home', 'services', 'about', 'work', 'contacts'],
+    slidesNavigation: true,
+
     //Scrolling
     scrollOverflow: true,
 
