@@ -2,10 +2,25 @@ header.page-header
   .container
     .row
       //logo
-      .col-md-3
+      .col-xs-6.col-sm-2
         .logo.page-header__logo
           a.logo__link(href="/")
             img.logo__img(src="assets/img/acrostia_logo.png", alt="acrostia")
             span.logo__text Acrostia
       //main-menu
-      .col-md-9
+      .col-xs-6.col-sm-10
+        .main-menu
+          button.main-menu__toggle.hamburger
+            span.hamburger__item
+          nav.main-menu__nav
+            ul.main-menu__list
+              li.main-menu__item.main-menu__item_blue
+                a.main-menu__link(href="#", data-menuanchor="") Home
+              li.main-menu__item.main-menu__item_red
+                a.main-menu__link(href="#", data-menuanchor="") Services
+              li.main-menu__item.main-menu__item_purple
+                a.main-menu__link(href="#", data-menuanchor="") About
+              li.main-menu__item.main-menu__item_green
+                a.main-menu__link(href="#", data-menuanchor="") Work
+              li.main-menu__item.main-menu__item_blue
+                a.main-menu__link(href="#", data-menuanchor="") Contacts
