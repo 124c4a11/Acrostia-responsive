@@ -2,7 +2,7 @@
   main-menu
 ==========================================================================*/
 
-$mobile-menu-bg-color: transparent;
+$mobile-menu-bg-color: #402f44;
 
 .main-menu {
   text-align: right;
@@ -22,7 +22,19 @@ $mobile-menu-bg-color: transparent;
 
 .main-menu__nav {
   @media only screen and (max-width: 992px) {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    overflow: auto;
+    /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+    -webkit-overflow-scrolling: touch;
+    font-size: 0;
+    background: url(../img/modal-bg.jpg) center no-repeat $mobile-menu-bg-color;
+    transition: opacity .25s;
   }
 }
 
@@ -41,22 +53,22 @@ $mobile-menu-bg-color: transparent;
 
 .main-menu__item_blue:hover,
 .main-menu__item_blue.active {
-  background-color: #74c7d5;
+  background-color: rgba(116, 199, 213, 1);
 }
 
 .main-menu__item_red:hover,
 .main-menu__item_red.active {
-  background-color: #df5c64;
+  background-color: rgba(223, 92, 100, 1);
 }
 
 .main-menu__item_purple:hover,
 .main-menu__item_purple.active {
-  background-color: #91778e;
+  background-color: rgba(145, 119, 142, 1);
 }
 
 .main-menu__item_green:hover,
 .main-menu__item_green.active {
-  background-color: #a1ca6c;
+  background-color: rgba(161, 202, 108, 1);
 }
 
 .main-menu__link {
@@ -86,15 +98,8 @@ $mobile-menu-bg-color: transparent;
   text-align: center;
 
   .main-menu__nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: auto;
-    font-size: 0;
-    background-color: $mobile-menu-bg-color;
+    visibility: visible;
+    opacity: 1;
 
     &::before {
       content: '';
@@ -114,6 +119,25 @@ $mobile-menu-bg-color: transparent;
     font-size: rem(16);
   }
 
+  .main-menu__item_blue:hover,
+  .main-menu__item_blue.active {
+    background-color: rgba(116, 199, 213, .5);
+  }
+
+  .main-menu__item_red:hover,
+  .main-menu__item_red.active {
+    background-color: rgba(223, 92, 100, .5);
+  }
+
+  .main-menu__item_purple:hover,
+  .main-menu__item_purple.active {
+    background-color: rgba(145, 119, 142, .5);
+  }
+
+  .main-menu__item_green:hover,
+  .main-menu__item_green.active {
+    background-color: rgba(161, 202, 108, .5);
+  }
   .main-menu__link {
     padding: rem(20);
     text-transform: uppercase;
