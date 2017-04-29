@@ -4,10 +4,13 @@
 
 .logo__link {
   display: inline-block;
+  max-width: 151px;
 }
 
 .logo__img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .logo__text {
