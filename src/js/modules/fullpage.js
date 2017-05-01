@@ -18,9 +18,9 @@ function init() {
 
     //Callbacks
     afterLoad: function(anchorLink, index) {
-      var $this = this;
+      var $currentSection = this;
 
-      pageHeader.showBackground(this);
+      pageHeader.showBackground($currentSection);
     },
 
     onLeave: function(index, nextIndex, direction) {

@@ -1,0 +1,77 @@
+/*==========================================================================
+  transition-layer
+==========================================================================*/
+
+@keyframes sequence {
+  0% {
+    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
+    transform: translate(-2%, -50%);
+  }
+  100% {
+    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
+    transform: translate(-98%, -50%);
+  }
+}
+
+@keyframes sequence-reverce {
+  0% {
+    transform: translate(-98%, -50%);
+  }
+  100% {
+    transform: translate(-2%, -50%);
+  }
+}
+
+.transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-max;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.transition-layer__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-2px);
+  /* our sprite is composed of 25 frames */
+  width: 2500%;
+  height: 100%;
+  background: url(../img/ink.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+/*==========================================================================
+  transition-layer_visible
+==========================================================================*/
+
+.transition-layer_visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*==========================================================================
+  transition-layer_opening
+==========================================================================*/
+
+.transition-layer_open {
+  .transition-layer__bg {
+    animation: sequence .8s steps(24) forwards;
+  }
+}
+
+/*==========================================================================
+  transition-layer_closing
+==========================================================================*/
+
+.transition-layer_close  {
+  .transition-layer__bg {
+    animation: sequence-reverce .8s steps(24);
+    animation-fill-mode: forwards;
+  }
+}

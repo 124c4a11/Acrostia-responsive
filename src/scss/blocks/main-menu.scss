@@ -25,16 +25,17 @@ $mobile-menu-bg-color: #402f44;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
+    width: 0;
+    height: 0;
     opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
     overflow: auto;
     /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
     -webkit-overflow-scrolling: touch;
     font-size: 0;
     background: url(../img/modal-bg.jpg) center no-repeat $mobile-menu-bg-color;
-    transition: opacity .25s;
+    transition: opacity .3s 0s;
   }
 }
 
@@ -98,8 +99,10 @@ $mobile-menu-bg-color: #402f44;
   text-align: center;
 
   .main-menu__nav {
-    visibility: visible;
+    width: 100%;
+    height: 100%;
     opacity: 1;
+    visibility: visible;
 
     &::before {
       content: '';
