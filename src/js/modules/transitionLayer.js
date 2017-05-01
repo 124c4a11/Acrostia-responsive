@@ -6,7 +6,8 @@ var
 
 var
   frameProportion = 1.78,
-  frames = 25;
+  frames = 25,
+  resize = false;
 
 function init() {
   if (!$transitionLayer.length) _render();
@@ -16,8 +17,6 @@ function init() {
 function _render() {
   $transitionLayer = $(document.createElement('div')),
   $transitionLayerBg = $(document.createElement('div'));
-
-  console.log($transitionLayer);
 
   $transitionLayerBg.addClass('transition-layer__bg');
 

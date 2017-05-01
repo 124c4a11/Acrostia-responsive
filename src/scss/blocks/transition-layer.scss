@@ -38,7 +38,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-2px);
+  transform: translate(-2%, -50%);
   /* our sprite is composed of 25 frames */
   width: 2500%;
   height: 100%;
@@ -61,7 +61,7 @@
 
 .transition-layer_open {
   .transition-layer__bg {
-    animation: sequence .8s steps(24) forwards;
+    animation: sequence .5s steps(24) forwards;
   }
 }
 
@@ -71,7 +71,7 @@
 
 .transition-layer_close  {
   .transition-layer__bg {
-    animation: sequence-reverce .8s steps(24);
+    animation: sequence-reverce .5s steps(24);
     animation-fill-mode: forwards;
   }
 }
