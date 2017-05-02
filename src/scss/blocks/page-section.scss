@@ -4,6 +4,10 @@
 
 .page-section__content {
   padding: em(180) 0 em(110);
+
+  @media only screen and (max-width: 768px) {
+    padding-top: em(120);
+  }
 }
 
 .page-section__header {
@@ -11,20 +15,27 @@
   margin-bottom: em(95);
 
   a {
-  &:link,
-  &:visited,
-  &:active {
-    color: rgba($text-color-light, .5);
-    text-decoration: none;
+    &:link,
+    &:visited,
+    &:active {
+      color: rgba($text-color-light, .5);
+      text-decoration: none;
+    }
+
+    &:visited,
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  &:hover {
-    text-decoration: underline;
+
+  @media only screen and (max-width: 768px) {
+    font-size: em(10);
   }
 }
 
 .page-section__title {
-  margin: 0 0 em(9);
+  margin: 0 0 em(8);
   font-size: em(60);
   line-height: 1;
   @include lato(light);
@@ -32,14 +43,18 @@
 }
 
 .page-section__subtitle {
-  margin: 0 0 rem(10);
+  margin: 0 0 em(5);
   font-size: em(20);
+  line-height: 1.8;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: em(15);
   }
 }
 
 .page-section__description {
-  font-size: em(14);
+  font-size: rem(14);
   line-height: 1.8;
   color: rgba($text-color-light, .65);
 
