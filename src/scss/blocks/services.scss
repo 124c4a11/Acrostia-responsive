@@ -1,0 +1,58 @@
+/*==========================================================================
+  services
+==========================================================================*/
+
+$item-bg-color: rgba(200, 83, 90, 1);
+
+
+.services__item {
+  padding: rem(44) rem(20);
+  margin-top: em(20);
+  border-radius: rem(5);
+  text-align: center;
+  background-color: $item-bg-color;
+}
+
+.services__item-img-wrapper {
+  position: relative;
+  z-index: 3;
+  width: em(134);
+  height: em(134);
+  margin: 0 auto em(25);
+  overflow: hidden;
+  border: em(6) solid transparent;
+  border-radius: 50%;
+  background-clip: content-box;
+  background-color: $text-color-light;
+  box-shadow: 0 0 0 em(4) $text-color-light;
+}
+
+.services__item-svg {
+  @include absolute-center();
+  width: 65%;
+  height: 60%;
+  fill: $item-bg-color;
+}
+
+.services__item-text-wrapper {
+  overflow: hidden;
+}
+
+.services__item-title {
+  margin: 0 0 em(18);
+  @include lato(light);
+  font-size: em(30);
+  text-transform: uppercase;
+}
+
+.services__item-description {
+  font-size: em(14);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

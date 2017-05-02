@@ -79,7 +79,7 @@ $mobile-menu-bg-color: #402f44;
   &:visited,
   &:hover,
   &:active {
-    color: #fff;
+    color: $text-color-light;
     text-decoration: none;
   }
 }
