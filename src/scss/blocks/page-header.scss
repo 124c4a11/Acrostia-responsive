@@ -27,6 +27,10 @@
     opacity: 1;
     background-image: linear-gradient(rgba(44, 62, 80, .55) 18%, transparent);
   }
+
+  @media only screen and (max-width: 992px) {
+    min-height: em(63);
+  }
 }
 
 /*==========================================================================
