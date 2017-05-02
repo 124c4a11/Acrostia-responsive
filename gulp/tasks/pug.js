@@ -9,7 +9,7 @@ module.exports = function() {
           message: err.message
         }
       })}))
-      .pipe($.gp.pug({ pretty: '\t' }))
+      .pipe($.gp.pug({ pretty: true }))
       .pipe($.gulp.dest($.config.root));
   });
 };
