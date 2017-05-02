@@ -1,5 +1,6 @@
 @mixin lato($weight: regular) {
   @if ($weight == light) {
+    font-weight: lighter;
     font-family: 'latolight', sans-serif;
   }
 
