@@ -33,6 +33,7 @@ $item-position-hover-text-color: #ff8973;
   border-radius: rem(5);
   @include lato(black);
   font-size: em(25);
+  text-align: center;
   text-transform: uppercase;
   background-color: $team-title-bg-color;
 
