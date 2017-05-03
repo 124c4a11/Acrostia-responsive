@@ -1,39 +1,32 @@
 section.home-section.page-section.page-section_darkblue.page-section_no-padding.page-section_no-padding(data-anchor="home")
   .main-carousel.owl-carousel
-    .main-carousel__item
-      .main-carousel__caption
-        .main-carousel__caption-text-wrapper
-          .main-carousel__caption-col.main-carousel__caption-col_left
-            p.main-carousel__item-text.main-carousel__item-text_md
-              | good ideas
-            p.main-carousel__item-text.main-carousel__item-text_sm
-              | comes
-          .main-carousel__caption-col.main-carousel__caption-col_right
-            p.main-carousel__item-text.main-carousel__item-text_lg
-              | First!
+    -
+      var carouselItems = [
+        {
+          img: '1.jpg',
+          textMd: 'good ideas',
+          textSm: 'comes',
+          textLg: 'First!'
+        },{
+          img: '2.jpg',
+          textMd: 'good ideas',
+          textSm: 'comes',
+          textLg: 'First!'
+        },{
+          img: '3.jpg',
+          textMd: 'good ideas',
+          textSm: 'comes',
+          textLg: 'First!'
+        },
+      ];
 
-      img.main-carousel__img(src="assets/img/main-carousel/1.jpg", alt="")
-    .main-carousel__item
-      .main-carousel__caption
-        .main-carousel__caption-text-wrapper
-          .main-carousel__caption-col.main-carousel__caption-col_left
-            p.main-carousel__item-text.main-carousel__item-text_md
-              | good ideas
-            p.main-carousel__item-text.main-carousel__item-text_sm
-              | comes
-          .main-carousel__caption-col.main-carousel__caption-col_right
-            p.main-carousel__item-text.main-carousel__item-text_lg
-              | First!
-      img.main-carousel__img(src="assets/img/main-carousel/2.jpg", alt="")
-    .main-carousel__item
-      .main-carousel__caption
-        .main-carousel__caption-text-wrapper
-          .main-carousel__caption-col.main-carousel__caption-col_left
-            p.main-carousel__item-text.main-carousel__item-text_md
-              | good ideas
-            p.main-carousel__item-text.main-carousel__item-text_sm
-              | comes
-          .main-carousel__caption-col.main-carousel__caption-col_right
-            p.main-carousel__item-text.main-carousel__item-text_lg
-              | First!
-      img.main-carousel__img(src="assets/img/main-carousel/3.jpg", alt="")
+    each item in carouselItems
+      .main-carousel__item
+        .main-carousel__caption
+          .main-carousel__caption-text-wrapper
+            .main-carousel__caption-col.main-carousel__caption-col_left
+              p.main-carousel__item-text.main-carousel__item-text_md= item.textMd
+              p.main-carousel__item-text.main-carousel__item-text_sm= item.textSm
+            .main-carousel__caption-col.main-carousel__caption-col_right
+              p.main-carousel__item-text.main-carousel__item-text_lg= item.textLg
+        img.main-carousel__img(src=`assets/img/main-carousel/${item.img}`, alt="")
