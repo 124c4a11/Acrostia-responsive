@@ -1,0 +1,59 @@
+/*==========================================================================
+  socials
+==========================================================================*/
+
+$purple: #a0849d;
+$blue: #82c8bd;
+
+$icon-color: #fff;
+
+
+.socials {
+  @include list-unstyled();
+}
+
+.socials__item {
+  position: relative;
+  @include inline-block();
+  width: em(30);
+  height: em(30);
+  margin: em(8);
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:hover {
+    &.socials__item_facebook .socials__item-link {
+      background-color: $fb-color;
+    }
+
+    &.socials__item_twitter .socials__item-link {
+      background-color: $tw-color;
+    }
+
+    &.socials__item_google-plus .socials__item-link {
+      background-color: $gp-color;
+    }
+
+    &.socials__item_linkedin .socials__item-link {
+      background-color: $in-color;
+    }
+  }
+}
+
+.socials__item-link {
+  display: block;
+  height: 100%;
+  background-color: $purple;
+  transition: .25s;
+}
+
+.socials__item-icon {
+  @include absolute-center();
+  fill: $icon-color;
+  width: 50%;
+  height: 50%;
+}
+
+.socials__item-text {
+  @include absolute-hidden();
+}

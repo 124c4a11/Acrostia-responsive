@@ -1,1 +1,60 @@
 section.about-section.page-section.page-section_purple(data-anchor="about")
+  .page-section__content
+    header.page-section__header
+      .container
+        h2.page-section__title
+          | Who we are &amp; what we do
+        .page-section__description
+          p Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
+    //team
+    .team
+      .container
+        .team__title
+          | Meet the team
+        .row
+          -
+            var team = [
+              {
+                img: 'assets/img/team/user-purple.png',
+                hoverImg: 'assets/img/team/user-red.png',
+                name: 'Anton Petrov',
+                position: 'General manager',
+                socials: ['facebook', 'twitter', 'google-plus', 'linkedin']
+              },{
+                img: 'assets/img/team/user-purple.png',
+                hoverImg: 'assets/img/team/user-red.png',
+                name: 'Kirl Donchev',
+                position: 'Design Master',
+                socials: ['facebook', 'twitter', 'google-plus', 'linkedin']
+              },{
+                img: 'assets/img/team/user-purple.png',
+                hoverImg: 'assets/img/team/user-red.png',
+                name: 'Ilian Bonev',
+                position: 'Developer Ninja',
+                socials: ['facebook', 'twitter', 'google-plus', 'linkedin']
+              },{
+                img: 'assets/img/team/user-purple.png',
+                hoverImg: 'assets/img/team/user-red.png',
+                name: 'Doni Stamov',
+                position: 'SEO guru',
+                socials: ['facebook', 'twitter', 'google-plus', 'linkedin']
+              }
+            ];
+
+          each user in team
+            .col-sm-6.col-lg-3
+              .team__item
+                a.team__item-link(href="#")
+                .team__item-img-wrapper
+                  img.team__item-img(src= user.img, data-hoverImg= user.hoverimg, alt= user.name)
+                .team__item-text-wrapper
+                  .team__item-name= user.name
+                  .team__item-position= user.position
+                  ul.team__socials.socials
+                    each item in user.socials
+                      li.socials__item(class=`socials__item_${item}`)
+                        a.socials__item-link(href="#")
+                          svg.socials__item-icon
+                            use(xlink:href=`assets/img/sprite.svg#${item}`)
+                          .socials__item-text= item
+    ///team
