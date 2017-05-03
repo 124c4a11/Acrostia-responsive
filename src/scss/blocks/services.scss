@@ -4,6 +4,8 @@
 
 $item-bg-color: rgba(200, 83, 90, 1);
 
+$item-img-wrapper-shadow-color: $text-color-light;
+
 
 .services__item {
   padding: rem(44) rem(20);
@@ -24,7 +26,7 @@ $item-bg-color: rgba(200, 83, 90, 1);
   border-radius: 50%;
   background-clip: content-box;
   background-color: $text-color-light;
-  box-shadow: 0 0 0 em(4) $text-color-light;
+  box-shadow: 0 0 0 em(4) $item-img-wrapper-shadow-color;
 }
 
 .services__item-svg {
