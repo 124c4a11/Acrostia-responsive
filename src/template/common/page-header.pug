@@ -14,19 +14,32 @@ header.page-header
             span.hamburger__item
           nav.main-menu__nav
             ul.main-menu__list
-              li.main-menu__item.main-menu__item_blue(data-menuanchor="home")
-                a.main-menu__link(href="#home")
-                  | Home
-              li.main-menu__item.main-menu__item_red(data-menuanchor="services")
-                a.main-menu__link(href="#services")
-                  | Services
-              li.main-menu__item.main-menu__item_purple(data-menuanchor="about")
-                a.main-menu__link(href="#about")
-                  | About
-              li.main-menu__item.main-menu__item_green(data-menuanchor="work")
-                a.main-menu__link(href="#work")
-                  | Work
-              li.main-menu__item.main-menu__item_blue(data-menuanchor="contacts")
-                a.main-menu__link(href="#contacts")
-                  | Contacts
+              -
+                var menuItems = [
+                  {
+                    title: 'Home',
+                    anchor: 'home',
+                    color: 'blue'
+                  },{
+                    title: 'Services',
+                    anchor: 'services',
+                    color: 'red'
+                  },{
+                    title: 'About',
+                    anchor: 'about',
+                    color: 'purple'
+                  },{
+                    title: 'Work',
+                    anchor: 'work',
+                    color: 'green'
+                  },{
+                    title: 'Contacts',
+                    anchor: 'contacts',
+                    color: 'blue'
+                  }
+                ];
+
+              each item in menuItems
+                li.main-menu__item(class=`main-menu__item_${item.color}`, data-menuanchor= item.anchor)
+                  a.main-menu__link(href=`#${item.anchor}`)= item.title
       ///main-menu
