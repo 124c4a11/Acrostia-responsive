@@ -66,6 +66,14 @@ $item-position-hover-text-color: #ff8973;
       box-shadow: 0 0 0 em(4) $img-wrapper-hover-shadow-color;
     }
 
+    .team__item-img {
+      display: none;
+    }
+
+    .team__item-img_hidden {
+      display: block;
+    }
+
     .team__item-name {
       color: $item-name-hover-text-color;
     }
@@ -112,8 +120,13 @@ $item-position-hover-text-color: #ff8973;
 }
 
 .team__item-img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.team__item-img_hidden {
+  display: none;
 }
 
 .team__item-text-wrapper {
