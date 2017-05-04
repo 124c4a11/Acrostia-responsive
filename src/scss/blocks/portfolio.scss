@@ -120,6 +120,7 @@ $work-overlay-text-color: #fff;
   position: relative;
   display: block;
   height: em(200);
+  overflow: hidden;
   transition: .25;
 
   &:link,
