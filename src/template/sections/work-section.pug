@@ -8,38 +8,39 @@ section.work-section.page-section.page-section_green(data-anchor="work")
           p Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
     //portfolio
     .portfolio
-      .portfolio__controls-bar
-        .container
-          .row
-            //portfolio__controls-title
-            .col-md-2
-              .portfolio__controls-bar-title portfolio
-            //portfolio__filter
-            .col-md-10
-              .portfolio__filter
-                .portfolio__filter-toggle filter
-                ul.portfolio__filter-list
-                  -
-                    var categories = [
-                      {
-                        title: 'All',
-                        filter: 'all'
-                      },{
-                        title: 'Photography',
-                        filter: '.photography'
-                      },{
-                        title: 'Logo design',
-                        filter: '.logo-design'
-                      },{
-                        title: 'Web design',
-                        filter: '.web-design'
-                      }
-                    ];
+      .container
+        .portfolio__controls-bar
+            .row
+              //portfolio__controls-title
+              .col-md-2
+                .portfolio__controls-bar-title portfolio
+              //portfolio__filter
+              .col-md-10
+                .portfolio__filter
+                  .portfolio__filter-toggle filter
+                  ul.portfolio__filter-list
+                    -
+                      var categories = [
+                        {
+                          title: 'All',
+                          filter: 'all'
+                        },{
+                          title: 'Photography',
+                          filter: '.photography'
+                        },{
+                          title: 'Logo design',
+                          filter: '.logo-design'
+                        },{
+                          title: 'Web design',
+                          filter: '.web-design'
+                        }
+                      ];
 
-                  each category in categories
-                    li.portfolio__filter-item
-                      button.portfolio__filter-btn(type="button", data-filter= category.filter)= category.title
-            ///portfolio__filter
+                    each category in categories
+                      li.portfolio__filter-item
+                        button.portfolio__filter-btn(type="button", data-filter= category.filter)
+                          span.portfolio__filter-btn-text= category.title
+              ///portfolio__filter
       //portfolio__works
       .portfolio__works
         .container
@@ -93,6 +94,6 @@ section.work-section.page-section.page-section_green(data-anchor="work")
               .col-md-3
                 figure.portfolio__works-item(class= work.category)
                   a.portfolio__works-item-link(href= work.lgImg)
-                    img.portfolio__works-item-img(src= work.thumbImg, alt= caption)
+                    img.portfolio__works-item-img(src= work.thumbImg, alt= work.caption)
                   figcaption.portfolio__works-item-caption= work.caption
       ///portfolio__works
