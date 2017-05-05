@@ -50,16 +50,7 @@ $work-overlay-text-color: #fff;
 }
 
 .portfolio__filter-btn {
-  padding: em(6) em(9);
-  border: 0 none;
-  border-radius: rem(4);
-  @include lato(bold);
-  font-size: 1em;
-  color: $filter-btn-text-color;
-  text-align: center;
   background-color: $filter-btn-bg-color;
-  outline: none;
-  transition: .25s;
 }
 
 .portfolio__filter-btn:hover,
