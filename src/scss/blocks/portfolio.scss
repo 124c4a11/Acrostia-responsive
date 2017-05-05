@@ -2,6 +2,7 @@
   portfolio
 ==========================================================================*/
 
+$controls-bar-border-width: rem(1);
 $controls-bar-border-color: rgba(255, 255, 255, .2);
 
 $filter-btn-bg-color: transparent;
@@ -19,8 +20,8 @@ $work-overlay-text-color: #fff;
 .portfolio__controls-bar {
   padding: em(31) em(19);
   margin-bottom: em(25);
-  border-top: rem(1) solid $controls-bar-border-color;
-  border-bottom: rem(1) solid $controls-bar-border-color;
+  border-top: $controls-bar-border-width solid $controls-bar-border-color;
+  border-bottom: $controls-bar-border-width solid $controls-bar-border-color;
 }
 
 .portfolio__controls-bar-title {
@@ -29,28 +30,104 @@ $work-overlay-text-color: #fff;
   font-size: em(20);
   line-height: 1.6;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 /*==========================================================================
   portfolio__filter
 ==========================================================================*/
 
+.portfolio__filter {
+  text-align: right;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.portfolio__filter_open {
+  .portfolio__filter-toggle {
+    &::after {
+      transform: translateY(-30%) rotate(-225deg);
+    }
+  }
+}
+
 .portfolio__filter-toggle {
+  position: relative;
   display: none;
+  padding-right: em(18);
+  @extend .portfolio__controls-bar-title;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $text-color-light;
+    text-decoration: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: em(1);
+    transform: translateY(-80%) rotate(-45deg);
+    display: block;
+    width: em(8);
+    height: em(8);
+    border-left: em(2) solid currentColor;
+    border-bottom: em(2) solid currentColor;
+    transition: transform .25s;
+  }
+
+  @media only screen and (max-width: 992px) {
+    @include inline-block;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .portfolio__filter-list {
   @include list-unstyled();
-  text-align: right;
+
+  @media only screen and (max-width: 992px) {
+    // display: none;
+    padding-top: em(31);
+    border-bottom: $controls-bar-border-width solid $controls-bar-border-color;
+  }
 }
 
 .portfolio__filter-item {
   @include inline-block();
   margin-left: em(30);
+
+  @media only screen and (max-width: 992px) {
+    display: block;
+    margin-left: 0;
+    border-top: $controls-bar-border-width solid $controls-bar-border-color;
+  }
 }
 
 .portfolio__filter-btn {
   background-color: $filter-btn-bg-color;
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    border-radius: 0;
+    padding-top: em(10);
+    padding-bottom: em(10);
+    text-align: right;
+  }
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .portfolio__filter-btn:hover,

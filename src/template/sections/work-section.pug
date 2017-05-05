@@ -12,12 +12,13 @@ section.work-section.page-section.page-section_green(data-anchor="work")
         .portfolio__controls-bar
             .row
               //portfolio__controls-title
-              .col-md-2
-                .portfolio__controls-bar-title portfolio
+              .col-sm-6.col-md-2
+                .portfolio__controls-bar-title Portfolio
               //portfolio__filter
-              .col-md-10
-                .portfolio__filter
-                  .portfolio__filter-toggle filter
+              .col-sm-6.col-md-10
+                .portfolio__filter.portfolio__filter_open
+                  button(type="button").portfolio__filter-toggle.btn
+                    | Categories
                   ul.portfolio__filter-list
                     -
                       var categories = [
