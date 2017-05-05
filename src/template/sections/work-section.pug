@@ -92,8 +92,8 @@ section.work-section.page-section.page-section_green(data-anchor="work")
               ];
 
             each work in works
-              .col-sm-6.col-md-3
-                figure.portfolio__works-item(class= work.category)
+              .col-sm-6.col-md-3.portfolio__works-item(class= work.category)
+                figure.portfolio__works-item-figure
                   a.portfolio__works-item-link(href= work.lgImg)
                     img.portfolio__works-item-img(src= work.thumbImg, alt= work.caption)
                   figcaption.portfolio__works-item-caption= work.caption
