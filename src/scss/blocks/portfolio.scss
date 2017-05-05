@@ -117,6 +117,11 @@ $work-overlay-text-color: #fff;
 .portfolio__filter-btn {
   background-color: $filter-btn-bg-color;
 
+  &:hover,
+  &.mixitup-control-active {
+    background-color: $filter-btn-active-bg-color;
+  }
+
   @media only screen and (max-width: 992px) {
     width: 100%;
     border-radius: 0;
@@ -128,11 +133,6 @@ $work-overlay-text-color: #fff;
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
-}
-
-.portfolio__filter-btn:hover,
-.portfolio__filter-btn_active {
-  background-color: $filter-btn-active-bg-color;
 }
 
 /*==========================================================================
