@@ -8,6 +8,9 @@ var
   $filterItems = $filter.find('.controls-bar__filter-item');
 
 var
+  windowWidth = 0;
+
+var
   // animationLaunched prevents animation from re-triggering until it finishes.
   animationLaunched = false,
   duration = 300;
@@ -51,13 +54,17 @@ function _filterListOpen() {
 }
 
 function _filterListClose() {
-  $filter.removeClass('controls-bar__filter_open');
-  $filterList.slideUp(duration, function() {
-    animationLaunched = false;
-  });
+  if (windowWidth < 992) {
+    $filter.removeClass('controls-bar__filter_open');
+    $filterList.slideUp(duration, function() {
+      animationLaunched = false;
+    });
+  }
 }
 
-function onResize(windowWidth) {
+function onResize(wWidth) {
+  windowWidth = wWidth;
+
   if (windowWidth > 992) {
     if ($filter.hasClass('controls-bar__filter_open')) {
       $filter.removeClass('controls-bar__filter_open');
