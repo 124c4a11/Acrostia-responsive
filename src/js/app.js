@@ -31,14 +31,16 @@ $(document).ready(function() {
 
 
 $(window).on('resize', function() {
-  var windowWidth = $(window).width();
+  var
+    windowWidth = $(window).width(),
+    windowHeight = $(window).height();
 
   if ($('.transition-layer').length) {
     transitionLayer.onResize();
   }
 
-  if ($('.main-menu').length && windowWidth > 992) {
-    mainMenu.close();
+  if ($('.main-menu').length) {
+    mainMenu.onResize(windowWidth);
   }
 
   if ($('.controls-bar').length) {

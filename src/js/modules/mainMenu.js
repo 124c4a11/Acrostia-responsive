@@ -50,8 +50,15 @@ function close() {
   }, delay);
 }
 
+function onResize(windowWidth) {
+  if (windowWidth > 992) {
+    close();
+  }
+}
+
 export default {
   init: init,
   open: open,
-  close: close
+  close: close,
+  onResize: onResize
 };
