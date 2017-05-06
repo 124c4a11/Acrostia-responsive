@@ -2,7 +2,6 @@
 
 import mixitup from 'mixitup';
 
-
 function init() {
   mixitup('.portfolio__works', {
     selectors: {
