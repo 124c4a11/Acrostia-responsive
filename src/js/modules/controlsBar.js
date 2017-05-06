@@ -15,7 +15,7 @@ var
   animationLaunched = false,
   duration = 300;
 
-function defineRelatedElements(elem) {
+function _defineRelatedElements(elem) {
   $controlsBar = elem.closest('.controls-bar');
   $filter = $controlsBar.find('.controls-bar__filter');
   $filterList = $filter.find('.controls-bar__filter-list');
@@ -28,7 +28,7 @@ function init() {
 
     var $filterToggle = $(this);
 
-    defineRelatedElements($filterToggle);
+    _defineRelatedElements($filterToggle);
 
     if (!animationLaunched) {
       _filterListOpen();
@@ -42,7 +42,7 @@ function init() {
 
     var $filterItem = $(this);
 
-    defineRelatedElements($filterItem);
+    _defineRelatedElements($filterItem);
     _filterListClose();
   });
 }
