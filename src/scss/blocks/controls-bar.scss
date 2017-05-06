@@ -39,7 +39,7 @@ $filter-btn-text-color: $text-color-light;
   }
 }
 
-.controls-baro__filter_open {
+.controls-bar__filter_open {
   .controls-bar__filter-toggle {
     &::after {
       transform: translateY(-30%) rotate(-225deg);
@@ -50,7 +50,7 @@ $filter-btn-text-color: $text-color-light;
 .controls-bar__filter-toggle {
   position: relative;
   display: none;
-  padding-right: em(18);
+  padding: 0 em(18) 0;
   @extend .controls-bar__title;
 
   &:link,
@@ -88,7 +88,7 @@ $filter-btn-text-color: $text-color-light;
   @include list-unstyled();
 
   @media only screen and (max-width: 992px) {
-    // display: none;
+    display: none;
     padding-top: em(31);
     border-bottom: $controls-bar-border-width solid $controls-bar-border-color;
   }
