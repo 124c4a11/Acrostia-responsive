@@ -42,7 +42,7 @@ $filter-btn-text-color: $text-color-light;
 .controls-bar__filter_open {
   .controls-bar__filter-toggle {
     &::after {
-      transform: translateY(-30%) rotate(-225deg);
+      transform: translateY(-30%) rotate(135deg);
     }
   }
 }
@@ -72,7 +72,7 @@ $filter-btn-text-color: $text-color-light;
     height: em(8);
     border-left: em(2) solid currentColor;
     border-bottom: em(2) solid currentColor;
-    transition: transform .25s;
+    transition: transform .3s;
   }
 
   @media only screen and (max-width: 992px) {
