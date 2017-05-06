@@ -3,21 +3,21 @@ section.home-section.page-section.page-section_darkblue.page-section_no-padding.
     -
       var carouselItems = [
         {
-          img: '1.jpg',
+          img: 'assets/img/main-carousel/1.jpg',
           textMd: 'good ideas',
           textSm: 'comes',
           textLg: 'First!'
         },{
-          img: '2.jpg',
+          img: 'assets/img/main-carousel/2.jpg',
           textMd: 'good ideas',
           textSm: 'comes',
           textLg: 'First!'
         },{
-          img: '3.jpg',
+          img: 'assets/img/main-carousel/3.jpg',
           textMd: 'good ideas',
           textSm: 'comes',
           textLg: 'First!'
-        },
+        }
       ];
 
     each item in carouselItems
@@ -29,4 +29,4 @@ section.home-section.page-section.page-section_darkblue.page-section_no-padding.
               p.main-carousel__item-text.main-carousel__item-text_sm= item.textSm
             .main-carousel__caption-col.main-carousel__caption-col_right
               p.main-carousel__item-text.main-carousel__item-text_lg= item.textLg
-        img.main-carousel__img(src=`assets/img/main-carousel/${item.img}`, alt="")
+        img.main-carousel__img(src= item.img, alt="")
