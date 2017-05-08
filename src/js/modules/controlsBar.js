@@ -8,7 +8,7 @@ var
   $filterItems = $filter.find('.controls-bar__filter-item');
 
 var
-  windowWidth = 0;
+  windowWidth = $(window).width();
 
 var
   // animationLaunched prevents animation from re-triggering until it finishes.
