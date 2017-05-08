@@ -1,0 +1,25 @@
+/*==========================================================================
+  magnific-popup
+==========================================================================*/
+
+$mfp-bg-color: #402f44;
+
+.mfp-wrap {
+  z-index: $z-index-max + 3;
+  opacity: 0;
+}
+
+.mfp-bg {
+  z-index: $z-index-max + 2;
+  opacity: 0;
+  background: url(../img/modal-bg.jpg) center no-repeat $mfp-bg-color;
+  background-size: cover;
+}
+
+.mfp-wrap_visible {
+  opacity: 1;
+}
+
+.mfp-bg_visible {
+  opacity: 1;
+}

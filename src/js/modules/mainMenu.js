@@ -51,7 +51,7 @@ function close() {
 }
 
 function onResize(windowWidth) {
-  if (windowWidth > 992) {
+  if (windowWidth > 992 && $mainMenu.hasClass('main-menu_open')) {
     close();
   }
 }
