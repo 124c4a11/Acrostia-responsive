@@ -12,6 +12,16 @@ $icon-color: #fff;
   @include list-unstyled();
 }
 
+.socials_lg {
+  font-size: em(32);
+}
+
+.socials_blue {
+  .socials__item-link {
+    background-color: $blue;
+  }
+}
+
 .socials__item {
   position: relative;
   @include inline-block();

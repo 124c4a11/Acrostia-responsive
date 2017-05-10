@@ -1,0 +1,20 @@
+/*==========================================================================
+  address
+==========================================================================*/
+
+$title-color: rgba($text-color-light, .55);
+
+.address {
+  font-style: normal;
+}
+
+.address__title {
+  margin: 0 0 em(5);
+  @include lato(bold);
+  font-size: em(20);
+  color: $title-color;
+}
+
+.address__item {
+  margin: 0;
+}

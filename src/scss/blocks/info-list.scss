@@ -1,0 +1,28 @@
+/*==========================================================================
+  info-list
+==========================================================================*/
+
+$title-color: rgba($text-color-light, .55);
+
+.info-list {
+  @include list-unstyled();
+}
+
+.info-list__item-title {
+  @include inline-block();
+  width: em(65);
+  color: $title-color;
+}
+
+.info-list__item-description {
+  @include inline-block();
+}
+
+.info-list__item-link {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $text-color-light;
+  }
+}

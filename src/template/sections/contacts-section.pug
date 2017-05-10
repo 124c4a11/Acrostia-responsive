@@ -1,1 +1,77 @@
 section.contacts-section.page-section.page-section_blue(data-anchor="contacts")
+  .page-section__content
+    header.page-section__header.page-section__header_margin-bottom_2x
+      .container
+        h2.page-section__title
+          | Contact us
+        .page-section__description
+          p Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
+    .container
+      .row
+        .col-md-6.page-section__col
+          h3.page-section__col-title Address
+          .row
+            .col-sm-5
+              address.contacts-section__address.address
+                h4.address__title Acrostia
+                p.address__item Sevenoaks Rd
+                p.address__item Sevenoaks TN14 7HR, UK
+              //info-list
+              ul.info-list
+                -
+                  var info = [
+                    {
+                      title: 'Phone:',
+                      description: '+44 555 555 555',
+                      href: 'tel:+44555555555'
+                    },{
+                      title: 'Fax:',
+                      description: '+44 556 555 555',
+                      href: 'tel:+44556555555'
+                    },{
+                      title: 'E-mail:',
+                      description: 'info@acrostia.com',
+                      href: 'email:info@acrostia.com'
+                    },{
+                      title: 'Skype:',
+                      description: 'Ac0stia',
+                      href: 'skype:Ac0stia'
+                    }
+                  ];
+
+                each item in info
+                  li.info-list__item
+                    .info-list__item-title= item.title
+                    .info-list__item-description
+                      a.info-list__item-link(href= item.href)= item.description
+              ///info-list
+            //map
+            .col-sm-7
+              .map
+                img(src="assets/img/map.jpg")
+            ///map
+        .col-md-6.page-section__col
+          h3.page-section__col-title Ask a question
+          //feedback
+          form.feedback
+            .row
+              .feedback__group.col-sm-6
+                input.field.field_blue(type="text" name="name" placeholder="Name")
+              .feedback__group.col-sm-6
+                input.field.field_blue(type="email" name="email" placeholder="Email")
+            .feedback__group
+              textarea.feedback__textarea.field.field_blue(name="question" placeholder="Your question")
+            .feedback__controls
+              button.feedback__submit.btn.btn_lg.btn_red.btn_3d(type="submit") Send
+          ///feedback
+    footer.page-section__footer
+      .container
+        ul.page-section__footer-socials.socials.socials_lg.socials_blue
+          -var socials = ['facebook', 'twitter', 'google-plus', 'linkedin'];
+
+          each item in socials
+            li.socials__item(class=`socials__item_${item}`)
+              a.socials__item-link(href="#")
+                svg.socials__item-icon
+                  use(xlink:href=`assets/img/sprite.svg#${item}`)
+                .socials__item-text= item

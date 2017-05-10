@@ -2,8 +2,12 @@
   page-section
 ==========================================================================*/
 
+$footer-bg-color: rgba(0, 0, 0, .09);
+
 .page-section__content {
-  padding: em(180) 0 em(110);
+  position: relative;
+  min-height: 100vh;
+  padding: em(180) 0 em(180);
 
   @media only screen and (max-width: 768px) {
     padding-top: em(120);
@@ -72,6 +76,12 @@
   }
 }
 
+.page-section__col-title {
+  margin: 0 0 em(12);
+  @include lato(light);
+  font-size: em(30);
+}
+
 .page-section_darkblue {
   background: url(../img/darkblue-bg.png) no-repeat #2c3e50;
   background-size: cover;
@@ -99,4 +109,18 @@
 
 .page-section_no-padding {
   padding: 0;
+}
+
+.page-section__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: em(20) 0;
+  text-align: center;
+  background-color: $footer-bg-color;
+}
+
+.page-section__footer-socials {
+  @include inline-block();
 }

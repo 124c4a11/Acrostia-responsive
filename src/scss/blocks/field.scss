@@ -1,0 +1,29 @@
+/*==========================================================================
+  field
+==========================================================================*/
+
+$blue: #82c8bd;
+
+$bg-color: rgba(0, 0, 0, .09);
+$focus-bg: #fff;
+
+.field {
+  width: 100%;
+  padding: rem(10) rem(15);
+  border: 0 none;
+  border-radius: rem(4);
+  background-color: $bg-color;
+  outline: none;
+  resize: none;
+
+  &:focus {
+    color: $text-color-base;
+    background-color: $focus-bg;
+
+    @include placeholderColor(transparent);
+  }
+}
+
+.field_blue {
+  @include placeholderColor($blue);
+}
