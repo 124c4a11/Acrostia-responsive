@@ -4,4 +4,14 @@
 
 .contacts-section__address {
     margin-bottom: rem(55);
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: rem(30);
+    }
+}
+
+.contacts-section__address-wrapper {
+  @media only screen and (max-width: 768px) {
+    margin-bottom: rem(40);
+  }
 }

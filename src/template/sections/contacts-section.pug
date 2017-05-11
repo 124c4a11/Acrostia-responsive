@@ -8,10 +8,10 @@ section.contacts-section.page-section.page-section_blue(data-anchor="contacts")
           p Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
     .container
       .row
-        .col-md-6.page-section__col
+        .col-lg-6.page-section__col
           h3.page-section__col-title Address
           .row
-            .col-sm-5
+            .contacts-section__address-wrapper.col-sm-6.col-lg-5
               address.contacts-section__address.address
                 h4.address__title Acrostia
                 p.address__item Sevenoaks Rd
@@ -46,11 +46,11 @@ section.contacts-section.page-section.page-section_blue(data-anchor="contacts")
                       a.info-list__item-link(href= item.href)= item.description
               ///info-list
             //map
-            .col-sm-7
+            .map-wrapper.col-sm-6.col-lg-7
               .map
-                img(src="assets/img/map.jpg")
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251269.01230046584!2d-118.30686745806678!3d34.16104543820909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf07045279bf%3A0xf67a9a6797bdfae4!2z0JPQvtC70LvQuNCy0YPQtCwg0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sby!4v1494505825681", frameborder="0", style="border:0", allowfullscreen)
             ///map
-        .col-md-6.page-section__col
+        .col-lg-6.page-section__col
           h3.page-section__col-title Ask a question
           //feedback
           form.feedback

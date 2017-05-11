@@ -32,6 +32,10 @@ $btn-text-color: $text-color-light;
   &.btn_3d {
     padding-bottom: em(5);
   }
+
+  @media only screen and (max-width: 320px) {
+    width: 90%;
+  }
 }
 
 .btn_3d {

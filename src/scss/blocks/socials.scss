@@ -14,6 +14,10 @@ $icon-color: #fff;
 
 .socials_lg {
   font-size: em(32);
+
+  @media only screen and (max-width: 768px) {
+    font-size: em(20);
+  }
 }
 
 .socials_blue {
