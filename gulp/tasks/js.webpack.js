@@ -46,7 +46,7 @@ module.exports = function() {
           $: "jquery",
           jQuery: "jquery",
           "window.jQuery": "jquery",
-          IScroll: 'iscroll'
+          IScroll: 'fullpage.js/vendors/scrolloverflow.js'
         })
       ]
     };
