@@ -10,6 +10,9 @@ function init() {
     navElement: 'button',
     navText: ['', ''],
     dots: true,
+    autoplay: true,
+    autoplayTimeout: 8000,
+    smartSpeed: 1000
   });
 }
 
