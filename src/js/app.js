@@ -6,6 +6,8 @@ import transitionLayer from './modules/transitionLayer';
 import mainMenu from './modules/mainMenu';
 import portfolio from './modules/portfolio';
 import controlsBar from './modules/controlsBar';
+import preloader from './modules/preloader';
+
 
 $(document).ready(function() {
   if ($('#fullpage').length) {
@@ -26,6 +28,13 @@ $(document).ready(function() {
 
   if ($('.controls-bar').length) {
     controlsBar.init();
+  }
+});
+
+
+$(window).on('load', function() {
+  if ($('.preloader').length) {
+    preloader.init();
   }
 });
 
