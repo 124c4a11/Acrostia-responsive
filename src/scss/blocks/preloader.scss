@@ -1,0 +1,21 @@
+/*==========================================================================
+  preloader
+==========================================================================*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.preloader__img {
+  @include transform-center();
+  width: 60px;
+  height: 60px;
+  background: url(../img/preloader.gif) center no-repeat;
+  background-size: cover;
+}
