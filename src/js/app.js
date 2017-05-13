@@ -8,6 +8,7 @@ import portfolio from './modules/portfolio';
 import controlsBar from './modules/controlsBar';
 import preloader from './modules/preloader';
 import services from './modules/services';
+import team from './modules/team';
 
 
 $(document).ready(function() {
@@ -33,6 +34,10 @@ $(document).ready(function() {
 
   if ($('.services').length) {
     services.init();
+  }
+
+  if ($('.team').length) {
+    team.init();
   }
 });
 
