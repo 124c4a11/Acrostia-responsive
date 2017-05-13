@@ -52,7 +52,7 @@ $item-position-hover-text-color: #ff8973;
 
 .team__item {
   position: relative;
-  padding: rem(44) rem(20) rem(30);
+  padding: rem(44) rem(20) rem(80);
   margin-top: em(20);
   border-radius: rem(5);
   text-align: center;
@@ -134,7 +134,14 @@ $item-position-hover-text-color: #ff8973;
 }
 
 .team__item-position {
-  margin: 0 0 em(30);
+  margin: 0 0 em(10);
   font-size: em(14);
   color: $item-position-text-color;
+}
+
+.team__socials {
+  position: absolute;
+  bottom: em(25);
+  left: 0;
+  width: 100%;
 }
