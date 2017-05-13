@@ -7,6 +7,7 @@ import mainMenu from './modules/mainMenu';
 import portfolio from './modules/portfolio';
 import controlsBar from './modules/controlsBar';
 import preloader from './modules/preloader';
+import services from './modules/services';
 
 
 $(document).ready(function() {
@@ -28,6 +29,10 @@ $(document).ready(function() {
 
   if ($('.controls-bar').length) {
     controlsBar.init();
+  }
+
+  if ($('.services').length) {
+    services.init();
   }
 });
 
