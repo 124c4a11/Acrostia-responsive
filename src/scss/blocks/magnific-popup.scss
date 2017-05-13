@@ -75,12 +75,12 @@ $controls-color-dark: #3f3f3f;
 .mfp-arrow-right {
   &::before,
   &::after {
-    left: em(40);
+    left: em(47);
     border-left: 0 none;
     transform: translateY(-50%) rotate(45deg);
   }
 
   &::before {
-    left: em(38);
+    left: em(45);
   }
 }
