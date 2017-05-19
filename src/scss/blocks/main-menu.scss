@@ -27,7 +27,6 @@ $mobile-menu-bg-color: #402f44;
     width: 0;
     height: 0;
     opacity: 0;
-    overflow: hidden;
     visibility: hidden;
     overflow: auto;
     /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
