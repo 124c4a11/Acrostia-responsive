@@ -11,7 +11,7 @@ function init() {
     navText: ['', ''],
     dots: true,
     autoplay: true,
-    autoplayTimeout: 8000,
+    autoplayTimeout: 10000,
     smartSpeed: 1000
   });
 }

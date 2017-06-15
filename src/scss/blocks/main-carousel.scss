@@ -15,6 +15,10 @@ $content-color: rgba(116, 199, 213, 1);
     height: 100%;
   }
 
+  .owl-item {
+    overflow: hidden;
+  }
+
   .owl-item img{
     width: auto;
     min-width: 100%;
