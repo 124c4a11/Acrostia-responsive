@@ -97,6 +97,6 @@ section.work-section.page-section.page-section_green(data-anchor="work")
               .col-sm-6.col-md-3.portfolio__works-item(class= work.category)
                 figure.portfolio__works-item-figure
                   a.portfolio__works-item-link(href= work.lgImg)
-                    img.portfolio__works-item-img(src= work.thumbImg, alt= work.caption)
+                   .portfolio__works-item-img(style=`background-image: url(${work.thumbImg})`)
                   figcaption.portfolio__works-item-caption= work.caption
       ///portfolio__works
