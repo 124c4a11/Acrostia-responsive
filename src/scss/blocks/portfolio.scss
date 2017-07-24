@@ -78,8 +78,8 @@ $work-overlay-text-color: #fff;
 .portfolio__works-item-img {
   position: relative;
   display: block;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .portfolio__works-item-caption {
