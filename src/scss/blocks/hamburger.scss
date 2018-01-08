@@ -26,6 +26,13 @@ $timing-func: linear;
   overflow: hidden;
   background: $hamburger-bg;
   outline: 0 none;
+  opacity: .8;
+  transition-duration: $duration;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
 .hamburger__item {
