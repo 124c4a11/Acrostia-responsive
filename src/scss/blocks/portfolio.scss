@@ -10,6 +10,8 @@ $work-caption-text-color: $text-color-base;
 $work-overlay-color: rgba(61, 76, 41, .7);
 $work-overlay-text-color: #fff;
 
+$duration: .25s;
+
 .portfolio__controls-bar {
   margin-bottom: em(30);
 }
@@ -20,58 +22,59 @@ $work-overlay-text-color: #fff;
   border-radius: rem(4);
   overflow: hidden;
   background-color: $work-bg-color;
-
-  &:hover {
-    .portfolio__works-item-link {
-       &::before {
-        content: '+';
-        position: absolute;
-        z-index: 3;
-        top: 76px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-        width: 50px;
-        height: 50px;
-        border: 2px solid $work-overlay-text-color;
-        border-radius: 50%;
-        overflow: hidden;
-        @include lato(light);
-        font-size: 48px;
-        line-height: 1;
-        text-align: center;
-        animation: 'fadeIn' .25s;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: $work-overlay-color;
-        animation: 'fadeIn' .25s;
-      }
-    }
-  }
 }
 
 .portfolio__works-item-link {
+  overflow: hidden;
   position: relative;
   display: block;
   height: em(200);
-  overflow: hidden;
-  transition: .25;
+  color: $work-overlay-text-color;
+  transition-duration: $duration;
 
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
+  &::before,
+  &::after {
+    position: absolute;
+    opacity: 0;
+    transition-duration: $duration;
+  }
+
+  &::before {
+    overflow: hidden;
+    content: '+';
+    top: 76px;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid $work-overlay-text-color;
+    border-radius: 50%;
+    font-size: 48px;
+    line-height: 1;
+    @include lato(light);
     color: $work-overlay-text-color;
+    text-align: center;
+  }
+
+  &::after {
+    content: '';
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $work-overlay-color;
+  }
+
+  &:hover,
+  &:focus {
     text-decoration: none;
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
   }
 }
 
