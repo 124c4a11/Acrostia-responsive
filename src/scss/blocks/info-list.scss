@@ -22,7 +22,9 @@ $title-color: rgba($text-color-light, .55);
   &:link,
   &:visited,
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     color: $text-color-light;
+    outline: 0 none;
   }
 }
