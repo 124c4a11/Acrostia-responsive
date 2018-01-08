@@ -6,7 +6,7 @@ $controls-bar-border-width: rem(1);
 $controls-bar-border-color: rgba(255, 255, 255, .2);
 
 $filter-btn-bg-color: transparent;
-$filter-btn-active-bg-color: #f5c149;
+$filter-btn-active-color: #f5c149;
 $filter-btn-text-color: $text-color-light;
 
 .controls-bar {
@@ -53,11 +53,9 @@ $filter-btn-text-color: $text-color-light;
   padding: 0 em(18) 0;
   @extend .controls-bar__title;
 
-  &:link,
-  &:visited,
   &:hover,
-  &:active {
-    color: $text-color-light;
+  &:focus {
+    color: $filter-btn-active-color;
     text-decoration: none;
   }
 
@@ -109,8 +107,9 @@ $filter-btn-text-color: $text-color-light;
   background-color: $filter-btn-bg-color;
 
   &:hover,
+  &:focus,
   &.mixitup-control-active {
-    background-color: $filter-btn-active-bg-color;
+    background-color: $filter-btn-active-color;
   }
 
   @media only screen and (max-width: 992px) {
