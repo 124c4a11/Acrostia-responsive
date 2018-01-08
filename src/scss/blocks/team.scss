@@ -57,9 +57,11 @@ $item-position-hover-text-color: #ff8973;
   border-radius: rem(5);
   text-align: center;
   background-color: $item-bg-color;
+  outline: 0 none;
   transition: .25s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $item-hover-bg-color;
 
     .team__item-img-wrapper {
@@ -82,19 +84,19 @@ $item-position-hover-text-color: #ff8973;
       color: $item-position-hover-text-color;
     }
 
-    .socials__item_facebook .socials__item-link {
+    .socials__item-link_facebook {
       background-color: $fb-color;
     }
 
-    .socials__item_twitter .socials__item-link {
+    .socials__item-link_twitter {
       background-color: $tw-color;
     }
 
-    .socials__item_google-plus .socials__item-link {
+    .socials__item-link_google-plus {
       background-color: $gp-color;
     }
 
-    .socials__item_linkedin .socials__item-link {
+    .socials__item-link_linkedin {
       background-color: $in-color;
     }
   }

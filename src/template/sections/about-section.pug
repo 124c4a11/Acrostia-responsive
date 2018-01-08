@@ -43,7 +43,7 @@ section.about-section.page-section.page-section_purple(data-anchor="about")
 
           each user in team
             .col-sm-6.col-lg-3
-              .team__item
+              .team__item(tabIndex="0")
                 .team__item-img-wrapper
                   img.team__item-img(src= user.img, alt= user.name)
                   img.team__item-img.team__item-img_hidden(src= user.hoverImg, alt= user.name)
@@ -52,8 +52,8 @@ section.about-section.page-section.page-section_purple(data-anchor="about")
                   .team__item-position= user.position
                   ul.team__socials.socials
                     each item in user.socials
-                      li.socials__item(class=`socials__item_${item}`)
-                        a.socials__item-link(href="#")
+                      li.socials__item
+                        a.socials__item-link(class=`socials__item-link_${item}`, href="#")
                           svg.socials__item-icon
                             use(xlink:href=`assets/img/sprite.svg#${item}`)
                           .socials__item-text= item

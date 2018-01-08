@@ -34,24 +34,6 @@ $icon-color: #fff;
   margin: em(8);
   border-radius: 50%;
   overflow: hidden;
-
-  &:hover {
-    &.socials__item_facebook .socials__item-link {
-      background-color: $fb-color;
-    }
-
-    &.socials__item_twitter .socials__item-link {
-      background-color: $tw-color;
-    }
-
-    &.socials__item_google-plus .socials__item-link {
-      background-color: $gp-color;
-    }
-
-    &.socials__item_linkedin .socials__item-link {
-      background-color: $in-color;
-    }
-  }
 }
 
 .socials__item-link {
@@ -59,6 +41,27 @@ $icon-color: #fff;
   height: 100%;
   background-color: $purple;
   transition: .25s;
+
+  &:hover,
+  &:focus {
+    outline: 0 none;
+    
+    &.socials__item-link_facebook {
+      background-color: $fb-color;
+    }
+
+    &.socials__item-link_twitter {
+      background-color: $tw-color;
+    }
+
+    &.socials__item-link_google-plus {
+      background-color: $gp-color;
+    }
+
+    &.socials__item-link_linkedin {
+      background-color: $in-color;
+    }
+  }
 }
 
 .socials__item-icon {

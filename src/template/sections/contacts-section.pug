@@ -70,8 +70,8 @@ section.contacts-section.page-section.page-section_blue(data-anchor="contacts")
           -var socials = ['facebook', 'twitter', 'google-plus', 'linkedin'];
 
           each item in socials
-            li.socials__item(class=`socials__item_${item}`)
-              a.socials__item-link(href="#")
+            li.socials__item
+              a.socials__item-link(class=`socials__item-link_${item}`, href="#")
                 svg.socials__item-icon
                   use(xlink:href=`assets/img/sprite.svg#${item}`)
                 .socials__item-text= item
