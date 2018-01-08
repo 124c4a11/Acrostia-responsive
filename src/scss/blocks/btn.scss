@@ -45,7 +45,8 @@ $btn-text-color: $text-color-light;
 .btn_red {
   background-color: $red;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: lighten($red, 5%);
   }
 
