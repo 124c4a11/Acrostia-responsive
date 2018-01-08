@@ -50,8 +50,11 @@ $content-color: rgba(116, 199, 213, 1);
       }
     }
 
-    &:hover::before {
-      border-color: $content-color;
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: $content-color;
+      }
     }
   }
 
