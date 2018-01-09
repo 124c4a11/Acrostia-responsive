@@ -40,6 +40,6 @@ header.page-header
                 ];
 
               each item in menuItems
-                li.main-menu__item(data-menuanchor= item.anchor)
-                  a.main-menu__link(class=`main-menu__link_${item.color}`, href=`#${item.anchor}`)= item.title
+                li.main-menu__item(class=`main-menu__item_${item.color}`, data-menuanchor= item.anchor)
+                  a.main-menu__link(href=`#${item.anchor}`)= item.title
       ///main-menu
