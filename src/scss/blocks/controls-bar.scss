@@ -53,8 +53,7 @@ $filter-btn-text-color: $text-color-light;
   padding: 0 em(18) 0;
   @extend .controls-bar__title;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $filter-btn-active-color;
     text-decoration: none;
   }
