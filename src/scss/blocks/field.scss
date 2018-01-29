@@ -15,6 +15,7 @@ $focus-bg: #fff;
   background-color: $bg-color;
   outline: none;
   resize: none;
+  transition-duration: .25s;
 
   &:focus {
     color: $text-color-base;

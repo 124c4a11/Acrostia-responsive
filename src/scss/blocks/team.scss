@@ -21,6 +21,8 @@ $item-name-hover-text-color: $text-color-light;
 $item-position-text-color: #a1ca6c;
 $item-position-hover-text-color: #ff8973;
 
+$duration: .25s;
+
 .team {
   text-align: center;
 }
@@ -58,7 +60,7 @@ $item-position-hover-text-color: #ff8973;
   text-align: center;
   background-color: $item-bg-color;
   outline: 0 none;
-  transition: .25s;
+  transition-duration: $duration;
 
   &:hover,
   &:focus {
@@ -69,7 +71,9 @@ $item-position-hover-text-color: #ff8973;
     }
 
     .team__item-img {
-      display: none;
+      &:first-child {
+        opacity: 0;
+      }
     }
 
     .team__item-img_hidden {
@@ -103,6 +107,7 @@ $item-position-hover-text-color: #ff8973;
 }
 
 .team__item-img-wrapper {
+  position: relative;
   width: em(154);
   height: em(154);
   margin: 0 auto em(25);
@@ -111,16 +116,19 @@ $item-position-hover-text-color: #ff8973;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 0 0 em(4) $img-wrapper-shadow-color;
+  transition-duration: $duration;
 }
 
 .team__item-img {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-}
 
-.team__item-img_hidden {
-  display: none;
+  &:first-child {
+    z-index: 1;
+    transition-duration: $duration;
+  }
 }
 
 .team__item-text-wrapper {
@@ -133,12 +141,14 @@ $item-position-hover-text-color: #ff8973;
   font-size: em(25);
   color: $item-name-text-color;
   text-transform: uppercase;
+  transition-duration: $duration;
 }
 
 .team__item-position {
   margin: 0;
   font-size: em(14);
   color: $item-position-text-color;
+  transition-duration: $duration;
 }
 
 .team__socials {
